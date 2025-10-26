@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon IV to PID Finder (Method 1)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="pkball.ico">
+</head>
+<body>
+    <div class="container">
+        <img src="titleFinder.png" alt="Pokémon IV to PID Finder" class="title-image">
+        
+        <form id="pid-form">
+            <label>Trainer ID: <input type="number" id="tid" value="0" min="0" max="65535" required></label>
+            <label>Desired Nature: <select id="nature" required></select></label>
+            <label>Desired Gender:
+                <select id="gender" required>
+                    <option value="male" selected>Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </label>
+            <label>Gender Ratio:
+                <select id="gender-ratio" required>
+                    <option value="12.5">12.5% Female</option>
+                    <option value="25">25% Female</option>
+                    <option value="50" selected>50% Female</option>
+                    <option value="75">75% Female</option>
+                </select>
+            </label>
+            <label>Desired Ability:
+                <select id="ability" required>
+                    <option value="0">Ability 1</option>
+                    <option value="1">Ability 2</option>
+                </select>
+            </label>
+            <fieldset>
+                <legend>IVs (blank for random)</legend>
+                <label>HP: <input type="number" id="hp" min="0" max="31"></label>
+                <label>Atk: <input type="number" id="atk" min="0" max="31"></label>
+                <label>Def: <input type="number" id="def" min="0" max="31"></label>
+                <label>SpA: <input type="number" id="spa" min="0" max="31"></label>
+                <label>SpD: <input type="number" id="spd" min="0" max="31"></label>
+                <label>Spe: <input type="number" id="spe" min="0" max="31"></label>
+            </fieldset>
+            <button type="submit" id="search-button">Find PID</button>
+        </form>
+        <div id="results-container">
+            <h3>Results:</h3>
+            <div id="results">Enter criteria and click search.</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
