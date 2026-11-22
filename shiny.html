@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gen 4 Cute Charm Shiny Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="pkball.ico">
+</head>
+
+<body>
+    <div class="shiny-page">
+        <div class="shiny-calculator-box">
+            <div class="title-banner">
+                <img src="manipulationTitle.png" alt="Gen 4 Cute Charm Manipulation" class="title-image">
+            </div>
+
+            <div class="nav-bar">
+                <a href="index.html" class="nav-button">← IV to PID Finder</a>
+            </div>
+
+            <form id="cute-charm-form">
+                <div style="text-align:center; font-size:0.85em; color:#475569;">
+                    <strong>Gen 4 Only:</strong> Diamond, Pearl, Platinum, HeartGold &amp; SoulSilver<br>
+                    All fields are optional. Leave blank to get working values.
+                </div>
+
+                <label>
+                    Trainer ID (TID):
+                    <input type="number" id="cc-tid" min="0" max="65535" placeholder="Optional (0 - 65535)">
+                </label>
+
+                <label>
+                    Secret ID (SID):
+                    <input type="number" id="cc-sid" min="0" max="65535" placeholder="Optional (0 - 65535)">
+                </label>
+
+                <label>
+                    Target Nature to Hunt:
+                    <select id="cc-nature">
+                        <option value="">Any Nature (Optional)</option>
+                    </select>
+                </label>
+
+                <label>
+                    Lead Pokémon Gender:
+                    <select id="cc-lead">
+                        <option value="any">Any (Check All Leads)</option>
+                        <option value="male">Male Lead (Best — Shiny ♀, all mixed ratios)</option>
+                        <option value="female-87.5">Female Lead (87.5% ♂ targets)</option>
+                        <option value="female-75">Female Lead (75% ♂ targets)</option>
+                        <option value="female-50">Female Lead (50% ♂ targets)</option>
+                        <option value="female-25">Female Lead (25% ♂ targets)</option>
+                    </select>
+                </label>
+
+                <button type="submit">Calculate</button>
+            </form>
+
+            <div id="results-container">
+                <h3>Cute Charm Result:</h3>
+                <div id="results" class="cc-results">Enter your TID, SID, and/or desired Nature (or leave all blank) and
+                    click Calculate.</div>
+            </div>
+        </div>
+
+        <section class="card-section">
+            <h2>Usable Cute Charm Pokémon (Gen 4)</h2>
+            <p style="font-size:0.92em; color:#334155;">
+                Only Pokémon that can legitimately have <strong>Cute Charm</strong> in Gen 4 (DPPt / HGSS) trigger this
+                glitch when placed in the <strong>1st party slot</strong> (even if fainted).
+                <em>(Milotic only gained Cute Charm as a Hidden Ability in Gen 5+, so it does not work in Gen
+                    4.)</em><br>
+                <strong>Tip:</strong> Hover (or tap) any of the 5 game logos under a Pokémon to see how to obtain it in
+                that version.
+            </p>
+            <div id="sprite-row" class="sprite-row"></div>
+        </section>
+
+        <section class="card-section">
+            <h3>How Gender &amp; Natures Work in the Gen 4 Cute Charm Glitch</h3>
+            <div class="info-grid">
+                <div class="info-box">
+                    <strong>1. The Gender Mechanic (Lead vs. Target)</strong><br>
+                    Cute Charm activates on <strong>2/3 (66.67%)</strong> of wild encounters and forces the wild Pokémon
+                    to be the <strong>opposite gender</strong> of your lead:<br>
+                    · <strong>Male Lead (Recommended):</strong> Targets <strong>Females</strong> and works across
+                    <strong>ALL</strong> mixed-gender species (12.5% F, 25% F, 50% F, 75% F).<br>
+                    · <strong>Female Lead:</strong> Targets <strong>Males</strong>, and your TID/SID only works for
+                    <strong>one specific gender ratio</strong> (87.5% M, 75% M, 50% M, or 25% M).<br>
+                    · Does not work on genderless, 100% male/female species, or static Method 1 encounters (except wild
+                    Heatran).
+                </div>
+                <div class="info-box">
+                    <strong>2. How Natures Are Grouped</strong><br>
+                    When Cute Charm triggers, the game forces 1 of 25 fixed PIDs (one per nature). Your
+                    <code>TID + SID</code> only unlocks <strong>one Shiny Group</strong> at a time — meaning picking a
+                    Nature you want also gives you all the other natures in that same group (up to <strong>8
+                        natures</strong> = <strong>21.33%</strong> shiny rate).
+                </div>
+                <div class="info-box">
+                    <strong>3. Does Your Lead Pokémon's Nature/PID Matter?</strong><br>
+                    <strong>No!</strong> Your Cute Charm lead Pokémon can have any PID, Nature, or IVs (even traded) —
+                    only its <strong>Cute Charm ability</strong> and <strong>Gender</strong> matter.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="shiny.js"></script>
+</body>
+
+</html>

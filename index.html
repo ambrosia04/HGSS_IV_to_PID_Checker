@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Pokémon IV to PID Finder (Method 1)</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="pkball.ico">
 </head>
+
 <body>
     <div class="container">
-        <img src="titleFinder.png" alt="Pokémon IV to PID Finder" class="title-image">
-        
+        <div class="title-banner">
+            <img src="titleFinder.png" alt="Pokémon IV to PID Finder" class="title-image title-finder">
+        </div>
+
+        <div class="nav-bar">
+            <a href="shiny.html" class="nav-button">Gen 4 Cute Charm Shiny Calculator →</a>
+        </div>
+
         <form id="pid-form">
             <label>Trainer ID: <input type="number" id="tid" value="0" min="0" max="65535" required></label>
             <label>Desired Nature: <select id="nature" required></select></label>
@@ -51,4 +59,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
